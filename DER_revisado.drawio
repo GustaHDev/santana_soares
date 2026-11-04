@@ -1,0 +1,327 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="DER" id="der-sistema-viagens">
+    <mxGraphModel dx="1181" dy="1845" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="titulo" parent="1" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=14;" value="&lt;b&gt;DER — Sistema de Gestão de Viagens&lt;/b&gt;&lt;br&gt;Django + PostgreSQL · versão 2026-11-03 · todas as tabelas têm id, criado_em e atualizado_em · FKs com PROTECT" vertex="1">
+          <mxGeometry height="50" width="900" y="-150" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_mvp" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="MVP" vertex="1">
+          <mxGeometry height="30" width="80" y="-90" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_f2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;" value="Fase 2" vertex="1">
+          <mxGeometry height="30" width="80" x="100" y="-90" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_quem" parent="1" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;" value="[M] motorista preenche · [A] admin preenche · [S] sistema preenche · linha tracejada = relação da fase 2 · FK &quot;nulo&quot; = opcional" vertex="1">
+          <mxGeometry height="30" width="700" x="200" y="-90" as="geometry" />
+        </mxCell>
+        <mxCell id="usuario" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Usuario" vertex="1">
+          <mxGeometry height="222" width="300" as="geometry" />
+        </mxCell>
+        <mxCell id="usuario_r0" parent="usuario" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;id&lt;/b&gt; (PK)" vertex="1">
+          <mxGeometry height="24" width="300" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="usuario_r1" parent="usuario" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="celular &lt;font color=&quot;#666666&quot;&gt;(único, login)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="300" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="usuario_r2" parent="usuario" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="nome" vertex="1">
+          <mxGeometry height="24" width="300" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="usuario_r3" parent="usuario" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="password &lt;font color=&quot;#666666&quot;&gt;(hash)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="300" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="usuario_r4" parent="usuario" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="role &lt;font color=&quot;#666666&quot;&gt;(admin / motorista)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="300" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="usuario_r5" parent="usuario" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="ativo" vertex="1">
+          <mxGeometry height="24" width="300" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="usuario_r6" parent="usuario" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="precisa_trocar_senha" vertex="1">
+          <mxGeometry height="24" width="300" y="174" as="geometry" />
+        </mxCell>
+        <mxCell id="usuario_r7" parent="usuario" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;font color=&quot;#666666&quot;&gt;criado_em / atualizado_em&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="300" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="motorista" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Motorista" vertex="1">
+          <mxGeometry height="126" width="300" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="motorista_r0" parent="motorista" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;id&lt;/b&gt; (PK)" vertex="1">
+          <mxGeometry height="24" width="300" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="motorista_r1" parent="motorista" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="usuario_id (FK → Usuario) único" vertex="1">
+          <mxGeometry height="24" width="300" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="motorista_r2" parent="motorista" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="placa_caminhao &lt;font color=&quot;#666666&quot;&gt;(único)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="300" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="motorista_r3" parent="motorista" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;font color=&quot;#666666&quot;&gt;criado_em / atualizado_em&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="300" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="viagem" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Viagem" vertex="1">
+          <mxGeometry height="462" width="440" x="450" as="geometry" />
+        </mxCell>
+        <mxCell id="viagem_r0" parent="viagem" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;id&lt;/b&gt; (PK)" vertex="1">
+          <mxGeometry height="24" width="440" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="viagem_r1" parent="viagem" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="motorista_id (FK → Motorista) [S]" vertex="1">
+          <mxGeometry height="24" width="440" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="viagem_r2" parent="viagem" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="cliente_cidade_id (FK → ClienteCidade) [M]" vertex="1">
+          <mxGeometry height="24" width="440" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="viagem_r3" parent="viagem" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="origem_id (FK → Cidade) [M]" vertex="1">
+          <mxGeometry height="24" width="440" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="viagem_r4" parent="viagem" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="data_saida [M]" vertex="1">
+          <mxGeometry height="24" width="440" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="viagem_r5" parent="viagem" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="nota_fiscal [M]" vertex="1">
+          <mxGeometry height="24" width="440" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="viagem_r6" parent="viagem" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="peso_ton [M]" vertex="1">
+          <mxGeometry height="24" width="440" y="174" as="geometry" />
+        </mxCell>
+        <mxCell id="viagem_r7" parent="viagem" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="km_inicial [M]" vertex="1">
+          <mxGeometry height="24" width="440" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="viagem_r8" parent="viagem" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="data_chegada &lt;font color=&quot;#666666&quot;&gt;(nulo até preencher)&lt;/font&gt; [M]" vertex="1">
+          <mxGeometry height="24" width="440" y="222" as="geometry" />
+        </mxCell>
+        <mxCell id="viagem_r9" parent="viagem" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="km_final &lt;font color=&quot;#666666&quot;&gt;(nulo até preencher)&lt;/font&gt; [M]" vertex="1">
+          <mxGeometry height="24" width="440" y="246" as="geometry" />
+        </mxCell>
+        <mxCell id="viagem_r10" parent="viagem" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="tonelada_cliente &lt;font color=&quot;#666666&quot;&gt;(snapshot)&lt;/font&gt; [S/A]" vertex="1">
+          <mxGeometry height="24" width="440" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="viagem_r11" parent="viagem" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="tonelada_motorista [A]" vertex="1">
+          <mxGeometry height="24" width="440" y="294" as="geometry" />
+        </mxCell>
+        <mxCell id="viagem_r12" parent="viagem" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="cte &lt;font color=&quot;#666666&quot;&gt;(só se o cliente faz CTE)&lt;/font&gt; [A]" vertex="1">
+          <mxGeometry height="24" width="440" y="318" as="geometry" />
+        </mxCell>
+        <mxCell id="viagem_r13" parent="viagem" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="status &lt;font color=&quot;#666666&quot;&gt;(aberta / fechada)&lt;/font&gt; [S]" vertex="1">
+          <mxGeometry height="24" width="440" y="342" as="geometry" />
+        </mxCell>
+        <mxCell id="viagem_r14" parent="viagem" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="fechada_em [S]" vertex="1">
+          <mxGeometry height="24" width="440" y="366" as="geometry" />
+        </mxCell>
+        <mxCell id="viagem_r15" parent="viagem" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="fechada_por_id (FK → Usuario) [S]" vertex="1">
+          <mxGeometry height="24" width="440" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="viagem_r16" parent="viagem" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="fechamento_id (FK → Fechamento) nulo [S] · fase 2" vertex="1">
+          <mxGeometry height="24" width="440" y="414" as="geometry" />
+        </mxCell>
+        <mxCell id="viagem_r17" parent="viagem" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;font color=&quot;#666666&quot;&gt;criado_em / atualizado_em&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="440" y="438" as="geometry" />
+        </mxCell>
+        <mxCell id="clientecidade" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="ClienteCidade" vertex="1">
+          <mxGeometry height="174" width="300" x="980" as="geometry" />
+        </mxCell>
+        <mxCell id="clientecidade_r0" parent="clientecidade" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;id&lt;/b&gt; (PK)" vertex="1">
+          <mxGeometry height="24" width="300" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="clientecidade_r1" parent="clientecidade" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="cliente_id (FK → Cliente)" vertex="1">
+          <mxGeometry height="24" width="300" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="clientecidade_r2" parent="clientecidade" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="cidade_id (FK → Cidade)" vertex="1">
+          <mxGeometry height="24" width="300" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="clientecidade_r3" parent="clientecidade" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="preco_tonelada &lt;font color=&quot;#666666&quot;&gt;(preço do cliente)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="300" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clientecidade_r4" parent="clientecidade" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="ativo" vertex="1">
+          <mxGeometry height="24" width="300" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="clientecidade_r5" parent="clientecidade" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;font color=&quot;#666666&quot;&gt;criado_em / atualizado_em&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="300" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="cidade" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Cidade" vertex="1">
+          <mxGeometry height="150" width="300" x="980" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="cidade_r0" parent="cidade" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;id&lt;/b&gt; (PK)" vertex="1">
+          <mxGeometry height="24" width="300" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cidade_r1" parent="cidade" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="nome" vertex="1">
+          <mxGeometry height="24" width="300" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="cidade_r2" parent="cidade" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="uf" vertex="1">
+          <mxGeometry height="24" width="300" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="cidade_r3" parent="cidade" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="ativo" vertex="1">
+          <mxGeometry height="24" width="300" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="cidade_r4" parent="cidade" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;font color=&quot;#666666&quot;&gt;criado_em / atualizado_em&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="300" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="cliente" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Cliente" vertex="1">
+          <mxGeometry height="150" width="300" x="1380" as="geometry" />
+        </mxCell>
+        <mxCell id="cliente_r0" parent="cliente" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;id&lt;/b&gt; (PK)" vertex="1">
+          <mxGeometry height="24" width="300" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cliente_r1" parent="cliente" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="nome" vertex="1">
+          <mxGeometry height="24" width="300" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="cliente_r2" parent="cliente" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="faz_cte" vertex="1">
+          <mxGeometry height="24" width="300" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="cliente_r3" parent="cliente" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="ativo" vertex="1">
+          <mxGeometry height="24" width="300" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="cliente_r4" parent="cliente" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;font color=&quot;#666666&quot;&gt;criado_em / atualizado_em&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="300" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="fechamento" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;" value="Fechamento (fase 2)" vertex="1">
+          <mxGeometry height="318" width="300" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="fechamento_r0" parent="fechamento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;id&lt;/b&gt; (PK)" vertex="1">
+          <mxGeometry height="24" width="300" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fechamento_r1" parent="fechamento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="motorista_id (FK → Motorista)" vertex="1">
+          <mxGeometry height="24" width="300" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="fechamento_r2" parent="fechamento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="mes_referencia" vertex="1">
+          <mxGeometry height="24" width="300" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="fechamento_r3" parent="fechamento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="valor_viagens" vertex="1">
+          <mxGeometry height="24" width="300" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="fechamento_r4" parent="fechamento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="comissao_percentual &lt;font color=&quot;#666666&quot;&gt;(snapshot 0,12)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="300" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="fechamento_r5" parent="fechamento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="valor_comissao" vertex="1">
+          <mxGeometry height="24" width="300" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="fechamento_r6" parent="fechamento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="total_descontos" vertex="1">
+          <mxGeometry height="24" width="300" y="174" as="geometry" />
+        </mxCell>
+        <mxCell id="fechamento_r7" parent="fechamento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="salario_liquido &lt;font color=&quot;#666666&quot;&gt;(≥ 0)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="300" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="fechamento_r8" parent="fechamento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="fechado_em" vertex="1">
+          <mxGeometry height="24" width="300" y="222" as="geometry" />
+        </mxCell>
+        <mxCell id="fechamento_r9" parent="fechamento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="fechado_por_id (FK → Usuario)" vertex="1">
+          <mxGeometry height="24" width="300" y="246" as="geometry" />
+        </mxCell>
+        <mxCell id="fechamento_r10" parent="fechamento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="pago_em &lt;font color=&quot;#666666&quot;&gt;(nulo até pagar)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="300" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="fechamento_r11" parent="fechamento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;font color=&quot;#666666&quot;&gt;criado_em / atualizado_em&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="300" y="294" as="geometry" />
+        </mxCell>
+        <mxCell id="desconto" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;" value="Desconto (fase 2)" vertex="1">
+          <mxGeometry height="222" width="440" x="450" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="desconto_r0" parent="desconto" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;id&lt;/b&gt; (PK)" vertex="1">
+          <mxGeometry height="24" width="440" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="desconto_r1" parent="desconto" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="motorista_id (FK → Motorista)" vertex="1">
+          <mxGeometry height="24" width="440" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="desconto_r2" parent="desconto" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="valor" vertex="1">
+          <mxGeometry height="24" width="440" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="desconto_r3" parent="desconto" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="motivo" vertex="1">
+          <mxGeometry height="24" width="440" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="desconto_r4" parent="desconto" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="data" vertex="1">
+          <mxGeometry height="24" width="440" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="desconto_r5" parent="desconto" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="tipo &lt;font color=&quot;#666666&quot;&gt;(desconto / adiantamento / ajuste / saldo_anterior)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="440" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="desconto_r6" parent="desconto" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="fechamento_id (FK → Fechamento) nulo" vertex="1">
+          <mxGeometry height="24" width="440" y="174" as="geometry" />
+        </mxCell>
+        <mxCell id="desconto_r7" parent="desconto" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;font color=&quot;#666666&quot;&gt;criado_em / atualizado_em&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="440" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="abastecimento" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;" value="Abastecimento (fase 2)" vertex="1">
+          <mxGeometry height="246" width="340" x="980" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="abastecimento_r0" parent="abastecimento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;id&lt;/b&gt; (PK)" vertex="1">
+          <mxGeometry height="24" width="340" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="abastecimento_r1" parent="abastecimento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="motorista_id (FK → Motorista)" vertex="1">
+          <mxGeometry height="24" width="340" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="abastecimento_r2" parent="abastecimento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="viagem_id (FK → Viagem) nulo, auto por data" vertex="1">
+          <mxGeometry height="24" width="340" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="abastecimento_r3" parent="abastecimento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="data" vertex="1">
+          <mxGeometry height="24" width="340" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="abastecimento_r4" parent="abastecimento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="litros" vertex="1">
+          <mxGeometry height="24" width="340" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="abastecimento_r5" parent="abastecimento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="valor_litro" vertex="1">
+          <mxGeometry height="24" width="340" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="abastecimento_r6" parent="abastecimento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="posto" vertex="1">
+          <mxGeometry height="24" width="340" y="174" as="geometry" />
+        </mxCell>
+        <mxCell id="abastecimento_r7" parent="abastecimento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="km_no_abastecimento" vertex="1">
+          <mxGeometry height="24" width="340" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="abastecimento_r8" parent="abastecimento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;font color=&quot;#666666&quot;&gt;criado_em / atualizado_em&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="340" y="222" as="geometry" />
+        </mxCell>
+        <mxCell id="nota_calc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=11;" value="&lt;b&gt;Valores calculados (não gravados)&lt;/b&gt;&lt;br&gt;km_rodado = km_final − km_inicial&lt;br&gt;valor_total = peso_ton × tonelada_cliente&lt;br&gt;valor_motorista = peso_ton × tonelada_motorista&lt;br&gt;margem_bruta = valor_total − valor_motorista&lt;br&gt;diesel_litros = soma dos litros dos abastecimentos (fase 2)&lt;br&gt;media_km_por_l = km_rodado / diesel_litros (fase 2)" vertex="1">
+          <mxGeometry height="140" width="440" x="450" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="nota_regras" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fontSize=11;" value="&lt;b&gt;Regras-chave&lt;/b&gt;&lt;br&gt;• Preço do cliente varia por cliente + cidade (ClienteCidade.preco_tonelada); é copiado para Viagem.tonelada_cliente na criação (snapshot).&lt;br&gt;• tonelada_motorista fica na Viagem, preenchida pelo admin.&lt;br&gt;• Comissão de 12% é constante no código (COMISSAO_MOTORISTA).&lt;br&gt;• Viagem conta para o mês da data_chegada.&lt;br&gt;• Viagem fechada: só o admin edita, até o fechamento mensal.&lt;br&gt;• Nada é apagado, exceto viagem ainda aberta." vertex="1">
+          <mxGeometry height="230" width="300" x="1380" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="rel0" edge="1" parent="1" source="usuario" style="edgeStyle=entityRelationEdgeStyle;html=1;endArrow=ERmandOne;startArrow=ERmandOne;endFill=0;startFill=0;" target="motorista" value="1:1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" edge="1" parent="1" source="motorista" style="edgeStyle=entityRelationEdgeStyle;html=1;endArrow=ERmany;startArrow=ERmandOne;endFill=0;startFill=0;" target="viagem" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2" edge="1" parent="1" source="clientecidade" style="edgeStyle=entityRelationEdgeStyle;html=1;endArrow=ERmany;startArrow=ERmandOne;endFill=0;startFill=0;" target="viagem" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3" edge="1" parent="1" source="cidade" style="edgeStyle=entityRelationEdgeStyle;html=1;endArrow=ERmany;startArrow=ERmandOne;endFill=0;startFill=0;" target="viagem" value="origem">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel4" edge="1" parent="1" source="usuario" style="edgeStyle=entityRelationEdgeStyle;html=1;endArrow=ERmany;startArrow=ERzeroToOne;endFill=0;startFill=0;" target="viagem" value="fechada_por">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel5" edge="1" parent="1" source="fechamento" style="edgeStyle=entityRelationEdgeStyle;html=1;endArrow=ERmany;startArrow=ERzeroToOne;endFill=0;startFill=0;dashed=1;" target="viagem" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel6" edge="1" parent="1" source="cliente" style="edgeStyle=entityRelationEdgeStyle;html=1;endArrow=ERmany;startArrow=ERmandOne;endFill=0;startFill=0;" target="clientecidade" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel7" edge="1" parent="1" source="cidade" style="edgeStyle=entityRelationEdgeStyle;html=1;endArrow=ERmany;startArrow=ERmandOne;endFill=0;startFill=0;" target="clientecidade" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel8" edge="1" parent="1" source="motorista" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=ERmany;startArrow=ERmandOne;endFill=0;startFill=0;dashed=1;libavoidRouting=1;" target="abastecimento" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="375" y="393" />
+              <mxPoint x="375" y="823" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel9" edge="1" parent="1" source="viagem" style="edgeStyle=entityRelationEdgeStyle;html=1;endArrow=ERmany;startArrow=ERzeroToOne;endFill=0;startFill=0;dashed=1;" target="abastecimento" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel10" edge="1" parent="1" source="motorista" style="edgeStyle=entityRelationEdgeStyle;html=1;endArrow=ERmany;startArrow=ERmandOne;endFill=0;startFill=0;dashed=1;" target="desconto" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel11" edge="1" parent="1" source="fechamento" style="edgeStyle=entityRelationEdgeStyle;html=1;endArrow=ERmany;startArrow=ERzeroToOne;endFill=0;startFill=0;dashed=1;" target="desconto" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel12" edge="1" parent="1" source="motorista" style="edgeStyle=entityRelationEdgeStyle;html=1;endArrow=ERmany;startArrow=ERmandOne;endFill=0;startFill=0;dashed=1;" target="fechamento" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel13" edge="1" parent="1" source="usuario" style="edgeStyle=entityRelationEdgeStyle;html=1;endArrow=ERmany;startArrow=ERmandOne;endFill=0;startFill=0;dashed=1;" target="fechamento" value="fechado_por">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
