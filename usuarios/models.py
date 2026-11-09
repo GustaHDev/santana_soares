@@ -13,7 +13,7 @@ class Papel(models.TextChoices):
 
 
 def validar_celular(valor):
-    digitos = re.sub(r"\D", "", valor)
+    digitos = normalizar_celular(valor)
     if len(digitos) < 10 or len(digitos) > 11:
         raise ValidationError("Celular deve ter 10 ou 11 dígitos (com DDD).")
 
@@ -48,24 +48,35 @@ class Usuario(AbstractBaseUser, PermissionsMixin, TimestampMixin):
         validators=[validar_celular],
         help_text="Somente dígitos, com DDD.",
     )
-    nome = models.CharField(max_length=150, verbose_name="nome")
+
+    nome = models.CharField(
+        max_length=150, 
+        verbose_name="nome"
+    )
+
     role = models.CharField(
         max_length=10,
         choices=Papel.choices,
         default=Papel.MOTORISTA,
         verbose_name="papel",
     )
-    ativo = models.BooleanField(default=True, verbose_name="ativo")
+
+    ativo = models.BooleanField(
+        default=True, 
+        verbose_name="ativo"
+    )
+
     precisa_trocar_senha = models.BooleanField(
         default=True,
         verbose_name="precisa trocar senha",
     )
+
     is_staff = models.BooleanField(
         default=True,
         verbose_name="acesso ao painel",
     )
 
-    objects = UsuarioManager()
+    Objects = UsuarioManager()
 
     USERNAME_FIELD = "celular"
     REQUIRED_FIELDS = ["nome"]

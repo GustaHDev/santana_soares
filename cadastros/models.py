@@ -20,8 +20,16 @@ class CidadeQuerySet(models.QuerySet):
 
 
 class Cidade(TimestampMixin, AtivoMixin):
-    nome = models.CharField(max_length=120, verbose_name="nome")
-    uf = models.CharField(max_length=2, choices=UFS_BRASIL, verbose_name="UF")
+    nome = models.CharField(
+        max_length=120, 
+        verbose_name="nome"
+    )
+
+    uf = models.CharField(
+        max_length=2, 
+        choices=UFS_BRASIL, 
+        verbose_name="UF"
+    )
 
     objects = CidadeQuerySet.as_manager()
 
@@ -46,8 +54,15 @@ class ClienteQuerySet(models.QuerySet):
 
 
 class Cliente(TimestampMixin, AtivoMixin):
-    nome = models.CharField(max_length=200, verbose_name="nome")
-    faz_cte = models.BooleanField(default=False, verbose_name="faz CT-e")
+    nome = models.CharField(
+        max_length=200, 
+        verbose_name="nome"
+    )
+
+    faz_cte = models.BooleanField(
+        default=False, 
+        verbose_name="faz CT-e"
+    )
 
     objects = ClienteQuerySet.as_manager()
 
@@ -72,12 +87,14 @@ class ClienteCidade(TimestampMixin, AtivoMixin):
         related_name="cidades",
         verbose_name="cliente",
     )
+
     cidade = models.ForeignKey(
         Cidade,
         on_delete=models.PROTECT,
         related_name="clientes",
         verbose_name="cidade",
     )
+    
     preco_tonelada = models.DecimalField(
         max_digits=12,
         decimal_places=2,

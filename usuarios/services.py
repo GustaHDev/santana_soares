@@ -6,7 +6,7 @@ from .models import Motorista, Papel, Usuario, normalizar_celular
 @transaction.atomic
 def criar_usuario_motorista(*, celular, nome, senha, placa_caminhao):
     celular = normalizar_celular(celular)
-    usuario = Usuario.objects.create_user(
+    usuario = Usuario.Objects.create_user(
         celular=celular,
         password=senha,
         nome=nome,
